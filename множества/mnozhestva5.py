@@ -1,9 +1,9 @@
-word_set = set()
-with open("input.txt","r") as file:
-    for line in file:
-        words = line.strip().split()
-        for word in words:
-            word_set.add(word)
+with open('input.txt', 'r', encoding='utf-8') as file:
+    text = file.read()  
 
-number_of_words = len(word_set)
-print("Количество разных слов в тексте:", number_of_words)
+words = text.split()  # Разбиваем текст на слова 
+
+unique_words = set(words)  # определениe уникальных слов
+count_unique_words = len(unique_words)  # Считаем количество уникальных слов
+
+print("Количество различных слов в тексте:", count_unique_words)
